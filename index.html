@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add this in the <head> section -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Symbiotic Review Hub - Universal Staking Revolution</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: black;
+            color: black;
+            overflow-x: hidden;
+            position: relative;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            min-height: 100vh;
+        }
+
+        /* Animated background gradient */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #c4fc5c, #2e7d32, #4caf50, #81c784);
+            background-size: 400% 400%;
+            opacity: 0.1;
+            animation: gradientShift 8s ease infinite;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            z-index: -2;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        #three-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Glassmorphism container */
+        .glass-container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .header {
+            text-align: center;
+            margin: 40px 0;
+            animation: fadeInUp 1.5s ease-out;
+            position: relative;
+        }
+
+        .logo-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .logo-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, #c4fc5c 0%, transparent 70%);
+            transform: translate(-50%, -50%);
+            opacity: 0.6;
+            animation: pulseLogo 3s infinite alternate;
+            border-radius: 50%;
+        }
+
+        .header img {
+            width: 120px;
+            position: relative;
+            z-index: 2;
+            animation: float 6s ease-in-out infinite;
+            filter: drop-shadow(0 10px 20px rgba(196, 252, 92, 0.3));
+        }
+
+        @keyframes pulseLogo {
+            0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.4; }
+            100% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.8; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        h1 {
+            font-size: 3.5em;
+            font-weight: 800;
+            background: linear-gradient(135deg, #c4fc5c, #2e7d32, #4caf50);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-top: 10px;
+            text-shadow: 0 5px 15px rgba(196, 252, 92, 0.3);
+            animation: textGlow 2s ease-in-out infinite alternate;
+            font-family: 'Orbitron', 'Inter', sans-serif;
+            color: black;
+        }
+
+         h2, .review-title, .feature-title {
+    font-family: 'Orbitron', 'Inter', sans-serif;
+      }
+
+
+        @keyframes textGlow {
+            from { filter: brightness(1) saturate(1); }
+            to { filter: brightness(1.2) saturate(1.3); }
+        }
+
+        .tagline {
+            font-size: 1.2em;
+            color: #c4fc5c;
+            font-weight: 300;
+            margin-top: 10px;
+            font-family: 'JetBrains Mono', monospace;
+             font-family: 'JetBrains Mono', 'Courier New', monospace;
+            animation: typeWriter 3s steps(50, end);
+        }
+
+        @keyframes typeWriter {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero-section {
+            text-align: center;
+            margin: 60px 0;
+            animation: fadeInUp 1.5s ease-out 0.3s both;
+        }
+
+        .hero-content {
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        .hero-content h2 {
+            font-size: 2.5em;
+            font-weight: 600;
+             font-family: 'JetBrains Mono', 'Courier New', monospace;
+            margin-bottom: 20px;
+
+            color: #ffffff;
+        }
+
+        .hero-content p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #b0b0b0;
+             font-family: 'JetBrains Mono', 'Courier New', monospace;
+            margin-bottom: 20px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+            animation: fadeInUp 1.5s ease-out 0.6s both;
+             font-family: 'JetBrains Mono', 'Courier New', monospace;
+        }
+
+        .stat-card {
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+             font-family: 'JetBrains Mono', 'Courier New', monospace;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(196, 252, 92, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .stat-card:hover::before {
+            left: 100%;
+             font-family: 'JetBrains Mono', 'Courier New', monospace;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 35px 60px rgba(196, 252, 92, 0.2);
+        }
+
+        .stat-number {
+            font-size: 3em;
+            font-weight: 800;
+            color: #c4fc5c;
+            display: block;
+             font-family: 'JetBrains Mono', 'Courier New', monospace;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.1em;
+            color: #ffffff;
+            font-weight: 500;
+             font-family: 'JetBrains Mono', 'Courier New', monospace;
+        }
+
+        .features-section {
+            margin: 80px 0;
+            animation: fadeInUp 1.5s ease-out 0.9s both;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+             font-family: 'JetBrains Mono', 'Courier New', monospace;
+        }
+
+        .feature-card {
+            padding: 40px;
+            position: relative;
+            transition: all 0.3s ease;
+             font-family: 'JetBrains Mono', 'Courier New', monospace;
+            border-left: 3px solid #c4fc5c;
+        }
+
+        .feature-card:hover {
+            transform: translateX(10px);
+             font-family: 'JetBrains Mono', 'Courier New', monospace;
+            border-left-color: #2e7d32;
+        }
+
+        .feature-icon {
+            font-size: 2.5em;
+            color: #c4fc5c;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-title {
+            font-size: 1.5em;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .feature-description {
+            color: #b0b0b0;
+            line-height: 1.6;
+        }
+
+        .review-container {
+            padding: 50px;
+            margin: 60px auto;
+            max-width: 600px;
+            text-align: center;
+            animation: bounceIn 1.5s ease-out 1.2s both;
+            position: relative;
+             font-family: 'JetBrains Mono', 'Courier New', monospace;
+        }
+
+        .review-container::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #c4fc5c, #2e7d32, #4caf50, #c4fc5c);
+            background-size: 300% 300%;
+            animation: gradientBorder 3s ease infinite;
+            border-radius: 22px;
+             font-family: 'JetBrains Mono', 'Courier New', monospace;
+            z-index: -1;
+        }
+
+        @keyframes gradientBorder {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .review-title {
+            font-size: 2.2em;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+
+        .rating {
+            margin: 30px 0;
+        }
+
+        .star {
+            font-size: 32px;
+            color: #333;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            margin: 0 5px;
+            display: inline-block;
+            position: relative;
+        }
+
+        .star:hover,
+        .star.selected {
+            color: #c4fc5c;
+            transform: scale(1.3) rotate(360deg);
+            filter: drop-shadow(0 0 10px #c4fc5c);
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(196, 252, 92, 0.3);
+            border-radius: 15px;
+            color: #ffffff;
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+            resize: none;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+             font-family: 'JetBrains Mono', 'Courier New', monospace;
+            transition: all 0.3s ease;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #c4fc5c;
+            box-shadow: 0 0 20px rgba(196, 252, 92, 0.3);
+            transform: scale(1.02);
+             font-family: 'JetBrains Mono', 'Courier New', monospace;
+        }
+
+        textarea::placeholder {
+            color: #666;
+             font-family: 'JetBrains Mono', 'Courier New', monospace;
+        }
+
+        .post-button {
+            background: linear-gradient(135deg, #c4fc5c, #2e7d32);
+            color: #000;
+            border: none;
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            position: relative;
+            overflow: hidden;
+             font-family: 'JetBrains Mono', 'Courier New', monospace;
+        }
+
+        .post-button:hover {
+            transform: scale(1.1) rotate(2deg);
+            box-shadow: 0 15px 30px rgba(196, 252, 92, 0.4);
+        }
+
+        .post-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+             font-family: 'JetBrains Mono', 'Courier New', monospace;
+        }
+
+        .post-button:hover::before {
+            left: 100%;
+             font-family: 'JetBrains Mono', 'Courier New', monospace;
+        }
+
+        .testimonials-section {
+            margin: 80px 0;
+            animation: fadeInUp 1.5s ease-out 1.5s both;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial-card {
+            padding: 30px;
+            position: relative;
+            transition: all 0.3s ease;
+             font-family: 'JetBrains Mono', 'Courier New', monospace;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+        }
+
+        .quote {
+            font-size: 1.1em;
+            color: #b0b0b0;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-style: italic;
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+        }
+
+        .author {
+            color: #c4fc5c;
+            font-weight: 600;
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 60px 20px 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 80px;
+            animation: fadeIn 2s ease-out 1.8s both;
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 30px;
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+        }
+
+        .footer-link {
+            color: #c4fc5c;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+        }
+
+        .footer-link:hover {
+            color: #ffffff;
+            transform: translateY(-2px);
+             font-family: 'JetBrains Mono', 'Courier New', monospace;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounceIn {
+            0% { opacity: 0; transform: scale(0.3) rotate(-10deg); }
+            50% { opacity: 1; transform: scale(1.05) rotate(5deg); }
+            70% { transform: scale(0.9) rotate(-2deg); }
+            100% { opacity: 1; transform: scale(1) rotate(0deg); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Floating particles */
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5em; }
+            .hero-content h2 { font-size: 2em; }
+            .features-grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+            .footer-links { flex-direction: column; gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="three-canvas"></canvas>
+
+    <div class="header">
+        <div class="logo-container">
+            <div class="logo-glow"></div>
+            <img src="symbiotic.png" alt="Symbiotic Logo">
+        </div>
+        <h1>Symbiotic</h1>
+        <div class="tagline">Universal Staking Revolution</div>
+    </div>
+
+    <div class="main-content">
+        <div class="hero-section glass-container">
+            <div class="hero-content">
+                <p>Symbiotic is the Universal Staking Framework that empowers protocols to build strong, secure ecosystems. Experience the future of DeFi with cutting-edge technology that connects validators, operators, and networks in perfect harmony.</p>
+                <p>Join thousands of innovators who are already building the next generation of blockchain infrastructure with Symbiotic's powerful staking solutions.</p>
+            </div>
+        </div>
+
+          <div class="review-container glass-container">
+            <h2 class="review-title">Share Your Experience</h2>
+            <p style="color: #b0b0b0; margin-bottom: 30px;">Your feedback shapes the future of decentralized finance. Rate your experience and share it with the community!</p>
+            
+            <div class="rating">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+            </div>
+            
+            <textarea id="review-text" placeholder="Tell us about your experience with Symbiotic. What makes it special for you?"></textarea>
+            
+            <button id="post-review" class="post-button">🐦 Post Review to X</button>
+        </div>
+
+       
+
+        <div class="features-section">
+            <div class="glass-container" style="padding: 40px; text-align: center;">
+                <h2 style="font-size: 2.5em; margin-bottom: 40px; color: #ffffff;">Why Choose Symbiotic?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <span class="feature-icon">🚀</span>
+                        <div class="feature-title">Universal Framework</div>
+                        <div class="feature-description">One platform to rule them all. Build any type of validation system with our flexible, modular architecture that adapts to your protocol's unique needs.</div>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🔒</span>
+                        <div class="feature-title">Maximum Security</div>
+                        <div class="feature-description">Advanced cryptographic protocols and multi-layer security ensure your assets are protected with institutional-grade security measures.</div>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">⚡</span>
+                        <div class="feature-title">Lightning Fast</div>
+                        <div class="feature-description">Process thousands of transactions per second with sub-second finality, powered by next-generation consensus algorithms.</div>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🌐</span>
+                        <div class="feature-title">Cross-Chain Native</div>
+                        <div class="feature-description">Seamlessly connect multiple blockchain networks with our native cross-chain infrastructure and interoperability protocols.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+
+    </div>
+
+    <div class="footer">
+        <div class="footer-links">
+            <a href="https://symbiotic.fi" class="footer-link">Visit Symbiotic</a>
+            <a href="https://x.com/symbioticfi" class="footer-link">Check Out Symbiotic On X</a>
+            <a href="https://discord.com/channels/1308889840808366110/1413418681953947688" class="footer-link">Join The Symbiotic Community On Discord</a>
+   
+        </div>
+        <a href="https://devmeme.xyz"><p style="color: #666;">&copy; 2025 Devmemes.</p></a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        // Advanced Three.js Scene with Particle System and Lighting
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ 
+            canvas: document.getElementById('three-canvas'), 
+            alpha: true, 
+            antialias: true 
+        });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setClearColor(0x000000, 0);
+        camera.position.z = 50;
+
+        // Create particle system
+        const particleCount = 1000;
+        const particles = new THREE.BufferGeometry();
+        const particleMaterial = new THREE.PointsMaterial({
+            color: 0xc4fc5c,
+            size: 2,
+            transparent: true,
+            opacity: 0.8,
+            blending: THREE.AdditiveBlending
+        });
+
+        const positions = new Float32Array(particleCount * 3);
+        const velocities = [];
+
+        for (let i = 0; i < particleCount * 3; i += 3) {
+            positions[i] = (Math.random() - 0.5) * 200;
+            positions[i + 1] = (Math.random() - 0.5) * 200;
+            positions[i + 2] = (Math.random() - 0.5) * 200;
+            
+            velocities.push(
+                (Math.random() - 0.5) * 0.02,
+                (Math.random() - 0.5) * 0.02,
+                (Math.random() - 0.5) * 0.02
+            );
+        }
+
+        particles.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+        const particleSystem = new THREE.Points(particles, particleMaterial);
+        scene.add(particleSystem);
+
+        // Create interconnected network effect
+        const connections = new THREE.BufferGeometry();
+        const connectionMaterial = new THREE.LineBasicMaterial({
+            color: 0x2e7d32,
+            transparent: true,
+            opacity: 0.1
+        });
+
+        // Create floating geometric shapes
+        const geometries = [
+            new THREE.TetrahedronGeometry(1, 0),
+            new THREE.OctahedronGeometry(1, 0),
+            new THREE.IcosahedronGeometry(1, 0)
+        ];
+
+        const shapes = [];
+        for (let i = 0; i < 20; i++) {
+            const geometry = geometries[Math.floor(Math.random() * geometries.length)];
+            const material = new THREE.MeshBasicMaterial({
+                color: Math.random() > 0.5 ? 0xc4fc5c : 0x2e7d32,
+                transparent: true,
+                opacity: 0.3,
+                wireframe: true
+            });
+            
+            const shape = new THREE.Mesh(geometry, material);
+            shape.position.set(
+                (Math.random() - 0.5) * 100,
+                (Math.random() - 0.5) * 100,
+                (Math.random() - 0.5) * 100
+            );
+            
+            shape.rotation.set(
+                Math.random() * Math.PI,
+                Math.random() * Math.PI,
+                Math.random() * Math.PI
+            );
+            
+            shape.velocity = new THREE.Vector3(
+                (Math.random() - 0.5) * 0.01,
+                (Math.random() - 0.5) * 0.01,
+                (Math.random() - 0.5) * 0.01
+            );
+            
+            shapes.push(shape);
+            scene.add(shape);
+        }
+
+        // Mouse interaction
+        const mouse = new THREE.Vector2();
+        const raycaster = new THREE.Raycaster();
+
+        window.addEventListener('mousemove', (event) => {
+            mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+            mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+        });
+
+        // Animation loop
+        function animate() {
+            requestAnimationFrame(animate);
+
+            const time = Date.now() * 0.001;
+
+            // Animate particles
+            const positions = particleSystem.geometry.attributes.position.array;
+            for (let i = 0; i < particleCount * 3; i += 3) {
+                positions[i] += velocities[i] + Math.sin(time + i) * 0.001;
+                positions[i + 1] += velocities[i + 1] + Math.cos(time + i) * 0.001;
+                positions[i + 2] += velocities[i + 2] + Math.sin(time + i) * 0.001;
+
+                // Boundary check
+                if (positions[i] > 100) positions[i] = -100;
+                if (positions[i] < -100) positions[i] = 100;
+                if (positions[i + 1] > 100) positions[i + 1] = -100;
+                if (positions[i + 1] < -100) positions[i + 1] = 100;
+                if (positions[i + 2] > 100) positions[i + 2] = -100;
+                if (positions[i + 2] < -100) positions[i + 2] = 100;
+            }
+            particleSystem.geometry.attributes.position.needsUpdate = true;
+
+            // Animate shapes
+            shapes.forEach((shape, index) => {
+                shape.rotation.x += 0.01 + index * 0.001;
+                shape.rotation.y += 0.01 + index * 0.001;
+                shape.rotation.z += 0.005 + index * 0.001;
+
+                shape.position.add(shape.velocity);
+
+                // Boundary bounce
+                if (shape.position.x > 50 || shape.position.x < -50) shape.velocity.x *= -1;
+                if (shape.position.y > 50 || shape.position.y < -50) shape.velocity.y *= -1;
+                if (shape.position.z > 50 || shape.position.z < -50) shape.velocity.z *= -1;
+
+                // Mouse interaction
+                const distance = camera.position.distanceTo(shape.position);
+                if (distance < 30) {
+                    shape.material.opacity = 0.8;
+                    shape.scale.setScalar(1.5 + Math.sin(time * 2) * 0.3);
+                } else {
+                    shape.material.opacity = 0.3;
+                    shape.scale.setScalar(1);
+                }
+            });
+
+            // Rotate particle system
+            particleSystem.rotation.x += 0.0005;
+            particleSystem.rotation.y += 0.001;
+
+            // Camera gentle movement
+            camera.position.x = Math.sin(time * 0.1) * 2;
+            camera.position.y = Math.cos(time * 0.15) * 1;
+            camera.lookAt(scene.position);
+
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        // Star Rating System with Enhanced Animation
+        const stars = document.querySelectorAll('.star');
+        let rating = 0;
+
+        stars.forEach((star, index) => {
+            star.addEventListener('mouseenter', () => {
+                stars.forEach((s, i) => {
+                    if (i <= index) {
+                        s.style.color = '#c4fc5c';
+                        s.style.transform = `scale(1.3) rotate(${(i + 1) * 72}deg)`;
+                        s.style.filter = 'drop-shadow(0 0 10px #c4fc5c)';
+                    } else {
+                        s.style.color = '#333';
+                        s.style.transform = 'scale(1) rotate(0deg)';
+                        s.style.filter = 'none';
+                    }
+                });
+            });
+
+            star.addEventListener('click', () => {
+                rating = parseInt(star.dataset.value);
+                stars.forEach((s, i) => {
+                    s.classList.toggle('selected', i < rating);
+                });
+                
+                // Add sparkle effect
+                createSparkles(star);
+            });
+        });
+
+        // Reset stars on mouse leave
+        document.querySelector('.rating').addEventListener('mouseleave', () => {
+            stars.forEach((star, index) => {
+                if (index < rating) {
+                    star.style.color = '#c4fc5c';
+                    star.style.transform = 'scale(1.2) rotate(360deg)';
+                    star.style.filter = 'drop-shadow(0 0 10px #c4fc5c)';
+                } else {
+                    star.style.color = '#333';
+                    star.style.transform = 'scale(1) rotate(0deg)';
+                    star.style.filter = 'none';
+                }
+            });
+        });
+
+        // Sparkle effect function
+        function createSparkles(element) {
+            for (let i = 0; i < 6; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.style.position = 'absolute';
+                sparkle.style.width = '4px';
+                sparkle.style.height = '4px';
+                sparkle.style.background = '#c4fc5c';
+                sparkle.style.borderRadius = '50%';
+                sparkle.style.pointerEvents = 'none';
+                sparkle.style.left = '50%';
+                sparkle.style.top = '50%';
+                sparkle.style.transform = 'translate(-50%, -50%)';
+                
+                const rect = element.getBoundingClientRect();
+                sparkle.style.left = rect.left + rect.width / 2 + 'px';
+                sparkle.style.top = rect.top + rect.height / 2 + 'px';
+                
+                document.body.appendChild(sparkle);
+                
+                const angle = (Math.PI * 2 * i) / 6;
+                const distance = 50;
+                const endX = Math.cos(angle) * distance;
+                const endY = Math.sin(angle) * distance;
+                
+                sparkle.animate([
+                    { transform: 'translate(-50%, -50%) scale(1)', opacity: 1 },
+                    { transform: `translate(${endX - 2}px, ${endY - 2}px) scale(0)`, opacity: 0 }
+                ], {
+                    duration: 600,
+                    easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+                }).onfinish = () => sparkle.remove();
+            }
+        }
+
+        // Enhanced Post to X functionality
+        document.getElementById('post-review').addEventListener('click', () => {
+            const reviewText = document.getElementById('review-text').value.trim();
+            
+            if (!reviewText) {
+                // Shake animation for empty review
+                const button = document.getElementById('post-review');
+                button.style.animation = 'shake 0.5s';
+                setTimeout(() => button.style.animation = '', 500);
+                
+                // Show tooltip
+                showTooltip('Please write a review first! ✨');
+                return;
+            }
+
+            if (rating === 0) {
+                showTooltip('Don\'t forget to rate us! ⭐');
+                return;
+            }
+
+            const starEmojis = '⭐'.repeat(rating);
+            const tweetText = encodeURIComponent(
+                `${starEmojis} Just experienced @symbioticfi - the Universal Staking Revolution! ${reviewText} #Symbiotic #DeFi #Staking #Blockchain`
+            );
+            const tweetUrl = `https://twitter.com/intent/tweet?text=${tweetText}`;
+            
+            // Success animation
+            const button = document.getElementById('post-review');
+            button.innerHTML = '🚀 Posting...';
+            button.style.transform = 'scale(0.95)';
+            
+            setTimeout(() => {
+                window.open(tweetUrl, '_blank');
+                button.innerHTML = '✅ Posted!';
+                button.style.background = 'linear-gradient(135deg, #4caf50, #2e7d32)';
+                
+                setTimeout(() => {
+                    button.innerHTML = '🐦 Post Review to X';
+                    button.style.background = 'linear-gradient(135deg, #c4fc5c, #2e7d32)';
+                    button.style.transform = 'scale(1)';
+                }, 2000);
+            }, 1000);
+        });
+
+        // Tooltip function
+        function showTooltip(message) {
+            const tooltip = document.createElement('div');
+            tooltip.textContent = message;
+            tooltip.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: rgba(196, 252, 92, 0.95);
+                color: #000;
+                padding: 15px 25px;
+                border-radius: 25px;
+                font-weight: 600;
+                font-size: 16px;
+                z-index: 10000;
+                box-shadow: 0 10px 30px rgba(196, 252, 92, 0.3);
+                animation: tooltipPop 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            `;
+            
+            document.body.appendChild(tooltip);
+            
+            setTimeout(() => {
+                tooltip.style.animation = 'tooltipPop 0.3s reverse';
+                setTimeout(() => tooltip.remove(), 300);
+            }, 2000);
+        }
+
+        // Add CSS animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes shake {
+                0%, 100% { transform: translateX(0); }
+                25% { transform: translateX(-5px) rotate(-1deg); }
+                75% { transform: translateX(5px) rotate(1deg); }
+            }
+            
+            @keyframes tooltipPop {
+                0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+                100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.glass-container, .stat-card, .feature-card, .testimonial-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add floating particles to page
+        function createFloatingParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.cssText = `
+                width: ${Math.random() * 6 + 2}px;
+                height: ${Math.random() * 6 + 2}px;
+                background: ${Math.random() > 0.5 ? '#c4fc5c' : '#2e7d32'};
+                left: ${Math.random() * 100}vw;
+                top: 100vh;
+                opacity: ${Math.random() * 0.6 + 0.2};
+                animation: floatUp ${Math.random() * 10 + 15}s linear infinite;
+            `;
+            
+            document.body.appendChild(particle);
+            
+            setTimeout(() => particle.remove(), 25000);
+        }
+
+        // Create floating particles periodically
+        setInterval(createFloatingParticle, 2000);
+
+        // Add float up animation
+        const floatStyle = document.createElement('style');
+        floatStyle.textContent = `
+            @keyframes floatUp {
+                0% {
+                    transform: translateY(0) translateX(0) rotate(0deg);
+                    opacity: 0;
+                }
+                10% {
+                    opacity: 1;
+                }
+                90% {
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateY(-100vh) translateX(${Math.random() * 200 - 100}px) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(floatStyle);
+
+        // Enhanced textarea interactions
+        const textarea = document.getElementById('review-text');
+        let typingTimer;
+
+        textarea.addEventListener('input', () => {
+            clearTimeout(typingTimer);
+            textarea.style.borderColor = '#c4fc5c';
+            textarea.style.boxShadow = '0 0 20px rgba(196, 252, 92, 0.3)';
+            
+            typingTimer = setTimeout(() => {
+                textarea.style.borderColor = 'rgba(196, 252, 92, 0.3)';
+                textarea.style.boxShadow = '0 0 10px rgba(196, 252, 92, 0.1)';
+            }, 1000);
+        });
+
+        // Add some initial sparkles
+        setTimeout(() => {
+            for (let i = 0; i < 10; i++) {
+                setTimeout(() => {
+                    const x = Math.random() * window.innerWidth;
+                    const y = Math.random() * window.innerHeight;
+                    createRandomSparkle(x, y);
+                }, i * 200);
+            }
+        }, 2000);
+
+        function createRandomSparkle(x, y) {
+            const sparkle = document.createElement('div');
+            sparkle.style.cssText = `
+                position: fixed;
+                width: 3px;
+                height: 3px;
+                background: #c4fc5c;
+                border-radius: 50%;
+                left: ${x}px;
+                top: ${y}px;
+                pointer-events: none;
+                z-index: 1000;
+            `;
+            
+            document.body.appendChild(sparkle);
+            
+            sparkle.animate([
+                { transform: 'scale(0)', opacity: 0 },
+                { transform: 'scale(1)', opacity: 1 },
+                { transform: 'scale(0)', opacity: 0 }
+            ], {
+                duration: 1500,
+                easing: 'ease-in-out'
+            }).onfinish = () => sparkle.remove();
+        }
+    </script>
+</body>
+</html>
